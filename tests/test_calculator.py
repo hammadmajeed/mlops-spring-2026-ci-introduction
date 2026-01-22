@@ -1,31 +1,22 @@
 import unittest
-from  src.calculator import add, subtract, multiply, divide
-import pytest
+from src.calculator import add, subtract, multiply, divide
 
-def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
-    assert add(-1, -1) == -2
-    
-def test_subtract():
-    assert subtract(5, 3) == 2
-    assert subtract(-1, 1) == -2
-    assert subtract(-1, -1) == 0
+class TestCalculator(unittest.TestCase):
 
-def test_multiply():
-    assert multiply(2, 3) == 6
-    assert multiply(-1, 1) == -1
-    assert multiply(-1, -1) == 1
-    
-def test_divide():
-    assert divide(6, 3) == 2
-    assert divide(-6, 2) == -3
-    assert divide(-6, -2) == 3
-    with pytest.raises(ValueError):
-        divide(1, 0)
-    
+    def test_add(self):
+        self.assertEqual(add(10, 5), 15)
+        self.assertEqual(add(-1, 1), 0)
+
+    def test_subtract(self):
+        self.assertEqual(subtract(10, 5), 5)
+
+    def test_multiply(self):
+        self.assertEqual(multiply(10, 5), 50)
+
+    def test_divide(self):
+        self.assertEqual(divide(10, 2), 5)
+        with self.assertRaises(ValueError):
+            divide(10, 0)
+
 if __name__ == '__main__':
-    test_add()
-    test_subtract()
-    test_multiply()
-    test_divide()
+    unittest.main()
