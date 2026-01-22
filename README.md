@@ -150,14 +150,11 @@ Copy the content below into the `README.md` file. This serves as the instruction
 
 # Lab: Intro to Continuous Integration (CI)
 
-Welcome to the CI Lab! In this activity, you will simulate a real-world software development lifecycle. You will set up a robot (GitHub Actions) that automatically tests your code every time you save it.
 
 ## 🏁 Step 1: Setup
 
-1. **Fork** this repository to your own GitHub account.
-2. Clone your forked repository to your local machine (or use GitHub Codespaces).
-3. Click the **Actions** tab in your GitHub repository. You should see a workflow run listed (triggered by your initial fork/push).
-4. Click on the workflow run to see the steps. Ensure all steps have a green checkmark ✅.
+1. Click the **Actions** tab in your GitHub repository. You should see a workflow run listed (triggered by your initial fork/push).
+2. Click on the workflow run to see the steps. Ensure all steps have a green checkmark ✅.
 
 ## 🧪 Step 2: The "Happy Path"
 
